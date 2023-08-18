@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <div className="navbar__logo">
-        <img className="nav_bar__logo" src={logo} alt="dental logo" />
+        <img className="navbar__logo" src={logo} alt="dental logo" />
       </div>
       <div className="navbar__toggle" onClick={toggleMenu}>
         <div className={`navbar__toggle__icon ${isMenuOpen ? `open` : ""}`}>
