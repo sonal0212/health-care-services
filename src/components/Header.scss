@@ -1,0 +1,69 @@
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  background-color: #0f766e;
+  border-top-left-radius: 50% 10%;
+  border-bottom-right-radius: 50% 10%;
+  padding: 12rem 20rem;
+
+  &__heading {
+    font-size: 2.4rem;
+    padding: 2rem 12rem;
+
+    &__title {
+      font-size: 6rem;
+      padding-bottom: 3rem;
+      color: aliceblue;
+    }
+
+    &__tagline {
+      font-size: 2.4rem;
+      color: #ffffff;
+      padding-bottom: 4rem;
+      font-weight: 500;
+      line-height: 3rem;
+    }
+
+    &__btn,
+    &__btn:link,
+    &__btn:visited {
+      padding-left: 2rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1.5rem 4rem;
+      display: inline-block;
+      font-size: 1.6rem;
+      font-weight: 500;
+      border-radius: 10rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+      background-color: #78cfb1;
+      color: var(--color-grey-800);
+    }
+
+    &__btn-animation:hover {
+      animation: moveInBottom 0.5s ease-out 0.75s;
+      animation-fill-mode: none;
+      animation-fill-mode: backwards;
+    }
+
+    &__btn-white:hover {
+      transform: scale(1.1);
+      background-color: #fff;
+      color: #043020;
+    }
+  }
+
+  &__image {
+    width: 120%;
+    height: 100%;
+    background-image: url("https://plus.unsplash.com/premium_photo-1661775868038-77ae66913504?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVudGFsJTIwcGF0aWVudHxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=650&q=650");
+    background-size: cover;
+    clip-path: circle(50% at center);
+    overflow-y: hidden;
+  }
+}

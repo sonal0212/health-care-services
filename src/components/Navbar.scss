@@ -1,0 +1,137 @@
+.navbar {
+  margin: auto auto;
+  padding: 4rem 10rem;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__toggle {
+    display: none;
+    cursor: pointer;
+    @media (max-width: 76.8rem) {
+      display: block;
+    }
+
+    &__icon {
+      width: 2.5rem;
+      height: 1.5rem;
+      display: block;
+      position: relative;
+
+      span {
+        width: 100%;
+        height: 0.3rem;
+        position: absolute;
+        background-color: black;
+        transition: transform 0.3s ease;
+
+        &:nth-child(1) {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 40%;
+        }
+
+        &:nth-child(3) {
+          bottom: 130%;
+        }
+      }
+
+      &.open {
+        background-color: white;
+
+        span {
+          &:nth-child(1) {
+            top: -80%;
+            transform: translateY(-50%) rotate(45deg);
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            bottom: 174%;
+            transform: translateY(50%) rotate(130deg);
+          }
+        }
+      }
+
+      &__close {
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        cursor: pointer;
+        color: black;
+        display: none;
+
+        @media (max-width: 76.8rem) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    max-height: 0;
+    list-style: none;
+    transition: max-height 0.3s ease;
+    margin: 0;
+    padding: 0;
+    @media (max-width: 768px) {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 6rem;
+      left: 0;
+      background-color: #e9efeca1;
+      width: 100%;
+
+      &.show {
+        display: flex;
+        align-items: center;
+        max-height: 50rem;
+        transition: max-height 0.3s ease;
+      }
+    }
+  }
+
+  &__item {
+    margin-right: 2rem;
+    @media (max-width: 76.8rem) {
+      margin: 0;
+      padding: 1rem 2rem;
+    }
+
+    a {
+      position: relative;
+      text-decoration: none;
+      padding-right: 2rem;
+      display: inline-block;
+      position: relative;
+      color: var(--color-primary-800);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    a::before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 0.3rem;
+      background-color: var(--color-secondary-500);
+      transition: width 0.3s ease;
+    }
+
+    a:hover::before {
+      width: 87%;
+    }
+  }
+}
