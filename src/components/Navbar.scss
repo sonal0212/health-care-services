@@ -11,9 +11,6 @@
     cursor: pointer;
     @media (max-width: 76.8rem) {
       display: block;
-      z-index: 3;
-      position: fixed;
-      padding: 0 45rem;
     }
 
     &__icon {
@@ -44,6 +41,8 @@
 
       &.open {
         background-color: white;
+        z-index: 3;
+        position: fixed;
 
         span {
           &:nth-child(1) {

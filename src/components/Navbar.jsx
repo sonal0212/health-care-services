@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
       </div>
       <ul ref={menuRef} className={`navbar__menu ${isMenuOpen ? "show" : ""}`}>
-        <NavbarItems link="#" label="Home" />
+        <NavbarItems link="" label="Home" />
         <NavbarItems link="#" label="About" />
         <NavbarItems link="#" label="Services" />
         <NavbarItems link="#" label="Our Doctors" />
