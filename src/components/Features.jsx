@@ -4,7 +4,7 @@ import Feature from "../data/Items";
 
 const Features = () => {
   return (
-    <section>
+    <section id = "section-features">
       <div className="features">
         <h1 className="features__title">We Care For your smile</h1>
         <p className="features__subtitle">

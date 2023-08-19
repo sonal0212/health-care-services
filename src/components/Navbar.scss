@@ -80,6 +80,8 @@
 
   &__menu {
     display: flex;
+    align-items: center;
+    justify-content: center;
     max-height: 0;
     list-style: none;
     transition: max-height 0.3s ease;

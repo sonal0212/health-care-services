@@ -8,9 +8,15 @@
   border-bottom-right-radius: 50% 10%;
   padding: 12rem 20rem;
 
+  @media (max-width: 76.8rem) {
+    padding: 6rem 1rem;
+    margin: 0;
+    text-align: center;
+  }
+
   &__heading {
     font-size: 2.4rem;
-    padding: 2rem 12rem;
+    padding: 2rem 10rem;
 
     &__title {
       font-size: 6rem;
@@ -47,7 +53,6 @@
 
     &__btn-animation:hover {
       animation: moveInBottom 0.5s ease-out 0.75s;
-      animation-fill-mode: none;
       animation-fill-mode: backwards;
     }
 
@@ -60,10 +65,13 @@
 
   &__image {
     width: 120%;
-    height: 100%;
+    height: 110%;
     background-image: url("https://plus.unsplash.com/premium_photo-1661775868038-77ae66913504?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVudGFsJTIwcGF0aWVudHxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=650&q=650");
     background-size: cover;
     clip-path: circle(50% at center);
     overflow-y: hidden;
+    @media (max-width: 76.8rem) {
+      display: none;
+    }
   }
 }

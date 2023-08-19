@@ -4,7 +4,7 @@ import { BsPatchCheckFill } from "react-icons/bs";
 
 const Services = () => {
   return (
-    <article className="services">
+    <article  className="services" id="section-services">
       <div className="services__left">
         <img className="services__left__side-img" src={service_img} />
         <img
@@ -24,15 +24,43 @@ const Services = () => {
         <ul className="services__right__list">
           <li>
             <BsPatchCheckFill className="services__right__list__icon" />
-            Appointment is Quick and Easy
+            Dental Extractions
           </li>
           <li>
             <BsPatchCheckFill className="services__right__list__icon" />
-            Top Specialist Doctors
+            Dental Implant Fixing
           </li>
           <li>
             <BsPatchCheckFill className="services__right__list__icon" />
-            Best Treatment
+            Sedation Dentistry
+          </li>
+          <li>
+            <BsPatchCheckFill className="services__right__list__icon" />
+            Teeth Whitening
+          </li>
+          <li>
+            <BsPatchCheckFill className="services__right__list__icon" />
+            Cosmetic Procedures
+          </li>
+          <li>
+            <BsPatchCheckFill className="services__right__list__icon" />
+            Dental Implants
+          </li>
+          <li>
+            <BsPatchCheckFill className="services__right__list__icon" />
+            Mouth And Sports Guards
+          </li>
+          <li>
+            <BsPatchCheckFill className="services__right__list__icon" />
+            Crowns
+          </li>
+          <li>
+            <BsPatchCheckFill className="services__right__list__icon" />
+            Root Canals
+          </li>
+          <li>
+            <BsPatchCheckFill className="services__right__list__icon" />
+            Oral Surgery Procedures
           </li>
         </ul>
       </div>

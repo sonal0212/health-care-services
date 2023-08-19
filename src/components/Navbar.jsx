@@ -38,10 +38,10 @@ const Navbar = () => {
         </div>
       </div>
       <ul ref={menuRef} className={`navbar__menu ${isMenuOpen ? "show" : ""}`}>
-        <NavbarItems link="" label="Home" />
-        <NavbarItems link="#" label="About" />
-        <NavbarItems link="#" label="Services" />
-        <NavbarItems link="#" label="Our Doctors" />
+        <NavbarItems link="#section-header" label="Home" />
+        <NavbarItems link="#section-features" label="About" />
+        <NavbarItems link="#section-services" label="Services" />
+        <NavbarItems link="#section-doctors" label="Our Doctors" />
         <NavbarItems link="#" label="Contact" />
       </ul>
     </header>
