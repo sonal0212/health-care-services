@@ -4,11 +4,11 @@ import Feature from "../data/Items";
 
 const Features = () => {
   return (
-    <section id = "section-features">
+    <section id="section-features">
       <div className="features">
         <h1 className="features__title">We Care For your smile</h1>
         <p className="features__subtitle">
-          Shanti Mulispeciality Dental Care provides a Comprehensive Care.
+          Shanti Multispeciality Dental Center provides a Comprehensive Care.
           <p className="features__subtitle">
             We are commited to provide best heath Care
           </p>

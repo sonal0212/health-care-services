@@ -5,7 +5,7 @@ const Feature = [
     id: 1,
     icon: FaCalendarDay,
     title: "Flexible time",
-    subtitle: "Your health should never be compromised by rigid timelines",
+    subtitle: "Morning:- 10 am to 1 pm Evening:- 5 pm to 8:30 pm",
     about:
       " Our goal is to ensure that you receive the care you need at a time that suits you best.",
   },

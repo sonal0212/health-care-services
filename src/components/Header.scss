@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   gap: 10rem;
-  background-color: #0f766e;
+  background-color: var(--color-primary-700);
   border-top-left-radius: 50% 10%;
   border-bottom-right-radius: 50% 10%;
   padding: 12rem 20rem;
@@ -47,7 +47,7 @@
       cursor: pointer;
       transition: all 0.2s;
       position: relative;
-      background-color: #78cfb1;
+      background-color: var(--color-secondary-300);
       color: var(--color-grey-800);
     }
 

@@ -42,7 +42,7 @@ const Navbar = () => {
         <NavbarItems link="#section-features" label="About" />
         <NavbarItems link="#section-services" label="Services" />
         <NavbarItems link="#section-doctors" label="Our Doctors" />
-        <NavbarItems link="#" label="Contact" />
+        <NavbarItems link="#section-contact" label="Contact" />
       </ul>
     </header>
   );
