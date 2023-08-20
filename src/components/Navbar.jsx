@@ -11,6 +11,10 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false);
+  };
+
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -38,11 +42,11 @@ const Navbar = () => {
         </div>
       </div>
       <ul ref={menuRef} className={`navbar__menu ${isMenuOpen ? "show" : ""}`}>
-        <NavbarItems link="#section-header" label="Home" />
-        <NavbarItems link="#section-features" label="About" />
-        <NavbarItems link="#section-services" label="Services" />
-        <NavbarItems link="#section-doctors" label="Our Doctors" />
-        <NavbarItems link="#section-contact" label="Contact" />
+        <NavbarItems link="#section-header" label="Home" onClick={handleMenuItemClick}/>
+        <NavbarItems link="#section-features" label="About" onClick={handleMenuItemClick}/>
+        <NavbarItems link="#section-services" label="Services" onClick={handleMenuItemClick}/>
+        <NavbarItems link="#section-doctors" label="Our Doctors" onClick={handleMenuItemClick}/>
+        <NavbarItems link="#section-contact" label="Contact" onClick={handleMenuItemClick}/>
       </ul>
     </header>
   );
