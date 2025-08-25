@@ -1,77 +1,229 @@
 .section-header {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10rem;
-  background-color: var(--color-primary-700);
-  border-top-left-radius: 50% 10%;
-  border-bottom-right-radius: 50% 10%;
-  padding: 12rem 20rem;
+  background: linear-gradient(135deg, var(--color-primary-700) 0%, var(--color-primary-800) 100%);
+  position: relative;
+  overflow: hidden;
+  padding-top: 8rem; // Account for fixed navbar
 
-  @media (max-width: 76.8rem) {
-    padding: 6rem 1rem;
-    margin: 0;
-    text-align: center;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    align-items: center;
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 0 4rem;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 1200px) {
+      gap: 6rem;
+      padding: 0 3rem;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      padding: 0 2rem;
+      text-align: center;
+    }
   }
 
   &__heading {
     font-size: 2.4rem;
-    padding: 2rem 10rem;
+    padding: 2rem 0;
 
     &__title {
-      font-size: 6rem;
+      font-size: clamp(4rem, 8vw, 7rem);
       padding-bottom: 3rem;
-      color: aliceblue;
+      color: white;
+      font-weight: 800;
+      line-height: 1.1;
+      background: linear-gradient(135deg, #ffffff 0%, var(--color-primary-100) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 2rem;
+
+      @media (max-width: 768px) {
+        font-size: clamp(3.5rem, 10vw, 5rem);
+      }
     }
 
     &__tagline {
-      font-size: 2.4rem;
-      color: #ffffff;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: rgba(255, 255, 255, 0.9);
       padding-bottom: 4rem;
-      font-weight: 500;
-      line-height: 3rem;
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 50rem;
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+        font-size: clamp(1.6rem, 4vw, 2rem);
+      }
     }
 
     &__btn,
     &__btn:link,
     &__btn:visited {
-      padding-left: 2rem;
+      padding: 1.8rem 4rem;
       text-transform: uppercase;
       text-decoration: none;
-      padding: 1.5rem 4rem;
       display: inline-block;
       font-size: 1.6rem;
-      font-weight: 500;
-      border-radius: 10rem;
-      border: none;
+      font-weight: 600;
+      border-radius: 5rem;
+      border: 2px solid transparent;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.3s ease;
       position: relative;
-      background-color: var(--color-secondary-300);
-      color: var(--color-grey-800);
+      background: linear-gradient(135deg, var(--color-secondary-400) 0%, var(--color-secondary-500) 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+      letter-spacing: 0.5px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, var(--color-secondary-500) 0%, var(--color-secondary-600) 100%);
+        border-radius: 5rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: -1;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
     }
 
     &__btn-animation:hover {
-      animation: moveInBottom 0.5s ease-out 0.75s;
-      animation-fill-mode: backwards;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
     }
 
     &__btn-white:hover {
-      transform: scale(1.1);
-      background-color: #fff;
-      color: #043020;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
     }
   }
 
   &__image {
-    width: 120%;
-    height: 110%;
-    background-image: url("https://plus.unsplash.com/premium_photo-1661775868038-77ae66913504?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVudGFsJTIwcGF0aWVudHxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=650&q=650");
-    background-size: cover;
-    clip-path: circle(50% at center);
-    overflow-y: hidden;
-    @media (max-width: 76.8rem) {
-      display: none;
+    position: relative;
+    width: 100%;
+    height: 60rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      height: 40rem;
+      order: -1;
+    }
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(34, 197, 94, 0.1) 100%);
+      border-radius: 2rem;
+      z-index: 1;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+  }
+
+  &__scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    .scroll-arrow {
+      width: 3rem;
+      height: 3rem;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg);
+      animation: bounce 2s infinite;
+
+      @media (max-width: 768px) {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  40% {
+    transform: translateY(-10px) rotate(45deg);
+  }
+  60% {
+    transform: translateY(-5px) rotate(45deg);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 1200px) {
+  .section-header {
+    padding: 6rem 2rem 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    padding: 4rem 1rem 2rem;
+    min-height: 90vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header {
+    padding: 3rem 1rem 2rem;
+    
+    &__heading {
+      padding: 1rem 0;
+      
+      &__btn {
+        padding: 1.5rem 3rem;
+        font-size: 1.4rem;
+      }
     }
   }
 }

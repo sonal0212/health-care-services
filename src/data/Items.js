@@ -1,17 +1,18 @@
-import { FaMoneyBill, FaCalendarDay } from "react-icons/fa";
-import { LuStethoscope } from "react-icons/lu";
+import { FaClock, FaUserMd, FaCreditCard } from "react-icons/fa";
+import { MdAccessTime, MdHealthAndSafety, MdPayment } from "react-icons/md";
+
 const Feature = [
   {
     id: 1,
-    icon: FaCalendarDay,
-    title: "Flexible time",
+    icon: MdAccessTime,
+    title: "Flexible Time",
     subtitle: "Morning:- 10 am to 1 pm Evening:- 5 pm to 8:30 pm",
     about:
-      " Our goal is to ensure that you receive the care you need at a time that suits you best.",
+      "Our goal is to ensure that you receive the care you need at a time that suits you best.",
   },
   {
     id: 2,
-    icon: LuStethoscope,
+    icon: MdHealthAndSafety,
     title: "Experienced Doctors",
     subtitle: "We are Compassionate and caregivers for our patients",
     about:
@@ -19,7 +20,7 @@ const Feature = [
   },
   {
     id: 3,
-    icon: FaMoneyBill,
+    icon: MdPayment,
     title: "Easy Payment",
     subtitle: "We strive to provide a range of payment options",
     about:
